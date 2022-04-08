@@ -1,7 +1,11 @@
 #include <stdio.h>
-/*program starts in the main function*/
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main()
 {
-  puts("\"programming is like building a multilingual puzzel");
+  puts("\"Programming is like building a multilingual puzzel");
   return(0);
 }
