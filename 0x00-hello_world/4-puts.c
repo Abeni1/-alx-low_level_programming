@@ -1,4 +1,4 @@
-#include <studio.h>
+#include <stdio.h>
 /*program starts in the main function*/
 int main()
 {
