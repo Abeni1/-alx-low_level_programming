@@ -33,9 +33,9 @@ while (y < 10)
 				{
 					putchar('0' + y);
 					putchar('0' + x);
-					putchar(" ,");
-					putchar('0' + a);
-					putchar('0' + c);
+					putchar(' ');
+					putchar(',');
+					putchar( '0' + a + '0' + c);
 					if (!(y + x == 18 && c + a == 17 && a == 9))
 					{
 						putchar(',');
