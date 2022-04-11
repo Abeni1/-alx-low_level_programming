@@ -11,45 +11,45 @@
  *00 01 and 01 00 are considered as the same combination of the numbers 0 and 1
  * Return: 0
  */
-int main(void)
+int main()
 {
-int c;
-int a;
-int x;
-int y = 0;
+	int p = 48, q = 48, y = 48, x = 49;
 
-while (y < 10)
-{
-	x = 0;
-	while (x < 10)
+	while (p < 58)
 	{
-		a = 0;
-		while (a < 10)
+		while (q < 58)
 		{
-			c = 1;
-			while (c < 10)
+			while (y < 58)
 			{
-				if (!(y == c && x == a))
+				while (x < 58)
 				{
-					putchar('0' + y);
-					putchar('0' + x);
+					putchar(p);
+					putchar(q);
 					putchar(' ');
-					putchar(',');
-					putchar( '0' + a + '0' + c);
-					if (!(y + x == 18 && c + a == 17 && a == 9))
+					putchar(y);
+					putchar(x);
+					if (!(p == 57 &&
+						q == 56 &&
+						y == 57 &&
+						x == 57))
 					{
 						putchar(',');
 						putchar(' ');
 					}
+					x++;
 				}
-				c++;
+				y++;
+				x = 48;
 			}
-			a++;
+			q++;
+			q = p;
+			x = q + 1;
 		}
-		x++;
+		p++;
+		q = 48;
+		y = p;
+		x = q+ 1;
 	}
-	y++;
-}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
