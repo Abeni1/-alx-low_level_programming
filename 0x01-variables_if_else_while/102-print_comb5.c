@@ -20,7 +20,7 @@ int f = 0;
 
 while (f < 10)
 {
-	e = 0;
+	e = 0 + f;
 	while (e < 10)
 	{
 		d = 0;
