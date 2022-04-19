@@ -1,1 +1,1 @@
-0x05.c - pointers,arrays and strings
+0x05.c - pointers,arrays and strings 
