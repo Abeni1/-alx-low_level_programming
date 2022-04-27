@@ -19,7 +19,7 @@ int is_prime(unsigned int n, unsigned int i)
 }
 /**
  * is_prime - detects if the input number is a prime number.
- * @i: iterator.
+ * @n: input number.
  * Return: 1 if n is a prime number, 0 if n is not.
  */
 int is_prime_number(int n)
