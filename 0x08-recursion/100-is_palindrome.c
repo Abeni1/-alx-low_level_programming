@@ -14,37 +14,32 @@ int _strlen_recursion(char *s)
 	}
 	return (1 + _strlen_recursion(++s));
 }
-
 /**
- * _pal - palindrome
- * @s: pointer to string
- * @p: position
- * Return: integer
+ * comparator - compares each character of the string.
+ * @s: string
+ * @i1: least iterator.
+ * @i2: biggest iterator.
+ * Return: .
  */
-
-int _pal(char *s, int p)
+int comparator(char *s, int i1, int i2)
 {
-	if (p < 1)
+	if (*(s + i1) == *(s + i2))
 	{
-		return (1);
-	}
-
-	if (*s == *(s + p))
-	{
-		return (_pal(p + 1, l - 2));
+		if (i1 == i2 || i1 == i2 + 1)
+			return (1);
+		return (0 + comparator(s, i1 + 1, i2 - 1));
 	}
 	return (0);
 }
 
 /**
- * is_palindrome - palindrome
- * @s: pointer to string
- * Return: recursion
+ * is_palindrome - detects if a string is a palindrome.
+ * @s: string.
+ * Return: 1 if the string is a palindrome, 0 if not.
  */
-
 int is_palindrome(char *s)
 {
-	int str_len = _strlen_recursion(s);
-
-	return (_pal(s, str_len - 1));
+	if (*s == '\0')
+		return (1);
+	return (comparator(s, 0, _strlen_recursion(s) - 1));
 }
