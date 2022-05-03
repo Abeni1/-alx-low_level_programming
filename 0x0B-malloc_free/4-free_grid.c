@@ -7,9 +7,9 @@
  *
  * Return: void hence no return.
  */
-void free_grid(int **grid,int height)
+void free_grid(int **grid, int height)
 {
-	if (grid != NULL && height !=0)
+	if (grid != NULL && height != 0)
 	{
 		for (; height >= 0; height--)
 			free(grid[height]);
